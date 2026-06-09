@@ -55,12 +55,12 @@ SmartSafe addresses this issue through a dual-layer authentication mechanism com
 
 ---
 
-# 🏗️ System Architecture
+# 🏗️ Main System Flow
 
 ```text
-                    ┌─────────────────────┐
+                    ┌─────────────────────┐                        
                     │      USER           │
-                    └──────────┬──────────┘
+                    └──────────┬──────────┘                                
                                │
                                ▼
                     ┌─────────────────────┐
@@ -79,28 +79,89 @@ SmartSafe addresses this issue through a dual-layer authentication mechanism com
                     │ Recognition         │
                     └──────────┬──────────┘
                                │
-                     Face Match?
-                        │
-            ┌───────────┴───────────┐
-            │                       │
-           NO                      YES
-            │                       │
-            ▼                       ▼
-    ┌──────────────┐      ┌──────────────────┐
-    │ Capture      │      │ MediaPipe        │
-    │ Intruder     │      │ Expression Check │
-    └──────┬───────┘      └────────┬─────────┘
-           │                       │
-           ▼                       ▼
-    ┌──────────────┐      Expression Correct?
-    │ Email Alert  │              │
-    └──────┬───────┘      ┌────────┴────────┐
-           │              │                 │
-           ▼             NO                YES
-    ┌──────────────┐      │                 │
-    │ Buzzer ON    │      ▼                 ▼
-    └──────────────┘  Access Denied   Servo Unlock
-                                      LCD Success
+                           Face Match?
+                               │
+                   ┌───────────┴───────────┐
+                   │                       │
+                  NO                      YES
+                   │                       │
+                   ▼                       ▼
+            ┌──────────────┐      ┌──────────────────┐
+            │ Capture      │      │ MediaPipe        │
+            │ Intruder     │      │ Expression Check │
+            └──────┬───────┘      └────────┬─────────┘
+                   │                       │
+                   ▼                       ▼
+            ┌──────────────┐      Expression Correct?
+            │ Email Alert  │              │
+           └──────┬───────┘      ┌────────┴────────┐
+                  │              │                 │
+                  ▼             NO                YES
+           ┌──────────────┐      │                 │
+           │ Buzzer ON    │      ▼                 ▼
+           └──────────────┘  Access Denied   Servo Unlock
+                                             LCD Success
+
+
+
+# Updating Process
+
+                     ┌──────────────────┐
+                     │  Update Owner    │
+                     └────────┬─────────┘
+                              │
+                              ▼
+                 ┌────────────────────────┐
+                 │ Security Questions     │
+                 │ Verification           │
+                 └────────┬───────────────┘
+                           
+                          ▼
+                 All Answers Correct?
+                          │
+             ┌────────────┴────────────┐
+             │                         │
+            NO                        YES
+             │                         │
+             ▼                         ▼
+   ┌─────────────────┐      ┌──────────────────┐
+   │ Access Denied   │      │ Clear Existing   │
+   └─────────────────┘      │ Face Dataset     │
+                            └────────┬─────────┘
+                                     │
+                                     ▼
+                            ┌──────────────────┐
+                            │ Capture 35 Face  │
+                            │ Images           │
+                            └────────┬─────────┘
+                                     │
+                                     ▼
+                            ┌──────────────────┐
+                            │ Train LBPH       │
+                            │   Model          │
+                            └────────┬─────────┘
+                                     │
+                                     ▼
+                            ┌──────────────────┐
+                            │ Update Email     │
+                            │ (Optional)       │
+                            └────────┬─────────┘
+                                     │
+                                     ▼
+                            ┌──────────────────┐
+                            │ Save New Owner   │
+                            │ Information      │
+                            └────────┬─────────┘
+                                     │
+                                     ▼
+                            ┌──────────────────┐
+                            │ Face Saved       │
+                            │ Successfully     │
+                            └────────┬─────────┘
+                                     │
+                                     ▼
+                                    END
+
 ```
 
 ---
@@ -348,7 +409,10 @@ SMARTSAFE
 
 ## Backend Implementation
 
-(Add Screenshot Here)
+<p align="center">
+  <img src=""C:\Users\Maanasa\OneDrive\Pictures\Screenshots\Screenshot(42).png" width="45%">
+  <img src=""C:\Users\Maanasa\OneDrive\Pictures\Screenshots\Screenshot(48).png" width="45%">
+</p>
 
 ## Front Implementation
 
@@ -358,15 +422,7 @@ SMARTSAFE
 
 (Add Screenshot Here)
 
----
-
-# ✅ Conclusion
-
-SmartSafe provides a secure and intelligent authentication solution by combining facial recognition with facial expression verification.
-
-The dual-verification mechanism significantly improves security by preventing unauthorized access and spoofing attacks. Integration with IoT hardware enables real-time operation, servo-controlled access, LCD notifications, buzzer alerts, and instant email notifications.
-
-The system demonstrates how Artificial Intelligence, Computer Vision, and IoT can be integrated to create a reliable and practical smart security solution.
+## System Architecture
 
 ---
 
@@ -382,6 +438,50 @@ The system demonstrates how Artificial Intelligence, Computer Vision, and IoT ca
 - Smart Home Integration
 - Multiple User Support
 - Remote Monitoring Dashboard
+
+---
+
+## 🎓 Learning Outcomes
+
+Through this project, we gained practical experience in:
+
+- Computer Vision using OpenCV
+- Facial Landmark Detection using MediaPipe
+- Face Recognition using LBPH
+- Flask Web Application Development
+- Arduino-Python Serial Communication
+- IoT Hardware Integration
+- Servo Motor Control
+- LCD Interfacing
+- Email Automation using SMTP
+- Real-Time Authentication Systems
+- Security System Design
+- Software-Hardware Integration
+
+---
+
+## 🚀 Deployment
+
+### Software Setup
+
+1. Install Python 3.x
+2. Install required libraries
+3. Connect Arduino Uno
+4. Upload Arduino code
+5. Run Flask application
+
+```bash
+python app.py
+
+---
+
+# ✅ Conclusion
+
+SmartSafe provides a secure and intelligent authentication solution by combining facial recognition with facial expression verification.
+
+The dual-verification mechanism significantly improves security by preventing unauthorized access and spoofing attacks. Integration with IoT hardware enables real-time operation, servo-controlled access, LCD notifications, buzzer alerts, and instant email notifications.
+
+The system demonstrates how Artificial Intelligence, Computer Vision, and IoT can be integrated to create a reliable and practical smart security solution.
 
 ---
 
