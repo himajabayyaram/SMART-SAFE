@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Safe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">SMART SAFE</div>
+
+    <div class="nav-links">
+        <a href="/home_ready">Home</a>
+    
+        <a href="/project_details">Project Details</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <p class="tagline">Face Recognition Based Security System</p>
+        <h1>SMART SAFE</h1>
+        <p class="subtitle">
+            A premium IoT security system using face recognition, alerts,
+            and smart access control.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="/#options" class="btn primary">Get Started</a>
+            <a href="/project_details" class="btn secondary">Project Details</a>
+        </div>
+    </div>
+</section>
+
+<section id="options" class="options-section">
+    <h2>Choose an Option</h2>
+    <p class="section-subtitle">Manage owner registration and safe access securely.</p>
+
+    <div class="cards">
+
+        <a href="/recognize" class="card">
+            <div class="icon">🔐</div>
+            <h3>Recognition</h3>
+            <p>Scan face and open safe only if the owner is verified.</p>
+        </a>
+
+        <a href="/register" class="card">
+            <div class="icon">👤</div>
+            <h3>Register</h3>
+            <p>Register the owner’s face for future authentication.</p>
+        </a>
+
+        <a href="/update_owner" class="card danger-card">
+            <div class="icon">♻️</div>
+            <h3>Update Owner</h3>
+            <p>Delete old owner data and register a new owner safely.</p>
+        </a>
+
+    </div>
+</section>
+
+<section class="quick-info">
+    <div>
+        <h2>Secure. Smart. Keyless.</h2>
+        <p>
+            Smart Safe replaces traditional keys with biometric face recognition.
+            It improves safety by allowing only the registered owner to unlock the safe.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Smart Safe | IoT Face Recognition Security System</p>
+</footer>
+
+</body>
+</html>

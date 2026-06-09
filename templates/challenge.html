@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expression Challenge | Smart Safe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">SMART SAFE</div>
+
+    <div class="nav-links">
+        <a href="/home_ready">Home</a>
+        <a href="/project_details">Project Details</a>
+    </div>
+</nav>
+
+<section class="camera-page">
+    <div class="camera-card">
+
+        <h1>Expression Verification</h1>
+        <p>Complete the movement challenge to unlock safe.</p>
+
+        <div class="camera-box">
+            <img src="{{ url_for('challenge_video_feed') }}" class="camera-feed">
+        </div>
+
+        <div class="lock-status waiting">
+            <div class="lock-icon">🔐</div>
+            <h2>VERIFYING</h2>
+            <p>Follow the instruction shown on camera.</p>
+        </div>
+
+        <div class="camera-buttons">
+            <a href="/home_ready" class="btn secondary">Back Home</a>
+        </div>
+
+    </div>
+</section>
+
+<script>
+setInterval(function () {
+    fetch("/check_challenge")
+        .then(response => response.json())
+        .then(data => {
+            if (data.done) {
+                if (data.result === "granted") {
+                    alert("ACCESS GRANTED");
+                    window.location.href = "/home_ready";
+                } else {
+                    alert("ACCESS DENIED");
+                    window.location.href = "/home_ready";
+                }
+            }
+        });
+}, 1000);
+</script>
+
+</body>
+</html>

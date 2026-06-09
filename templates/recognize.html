@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recognition | Smart Safe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">SMART SAFE</div>
+
+    <div class="nav-links">
+        <a href="/home_ready">Home</a>
+        <a href="/project_details">Project Details</a>
+    </div>
+</nav>
+
+<section class="camera-page">
+    <div class="camera-card">
+
+        <h1>Face Recognition</h1>
+        <p>Scan your face to verify owner access.</p>
+
+        {% if message %}
+            <p class="status-message">{{ message }}</p>
+        {% endif %}
+
+       <div class="camera-box">
+    {% if status == "waiting" %}
+        <img src="{{ url_for('video_feed') }}" class="camera-feed" onerror="window.location.href='/challenge';">
+    {% else %}
+        <div class="camera-placeholder">
+            Camera will start after clicking Start Face Scan
+        </div>
+    {% endif %}
+</div>
+
+        {% if status == "granted" %}
+            <div class="lock-status granted">
+                <div class="lock-icon">🔓</div>
+                <h2>ACCESS GRANTED</h2>
+                <p>Safe Unlocked Successfully</p>
+            </div>
+
+        {% elif status == "denied" %}
+            <div class="lock-status denied">
+                <div class="lock-icon">🔒</div>
+                <h2>ACCESS DENIED</h2>
+                <p>Unknown Face Detected</p>
+            </div>
+
+        {% else %}
+    <div class="lock-status waiting">
+        <div class="lock-icon">🔐</div>
+        <h2>WAITING</h2>
+
+        {% if status == "waiting" %}
+            <script>
+                setInterval(function () {
+                    fetch("/check_recognition")
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.done) {
+                                if (data.result==="FACE_OK"){
+                                    window.location.href="/challenge";
+                                }
+                                else if (data.result==="ACCESS_GRANTED"){
+                                    alert("ACCESS DENIED");
+                                    window.location.href="/home_ready";
+
+                                }
+        
+                            }
+                        });
+                }, 1000);
+            </script>
+
+            <p>Face scanning in progress...</p>
+        {% else %}
+            <p>Click start to begin face scanning</p>
+        {% endif %}
+    </div>
+{% endif %}
+        
+
+        <div class="camera-buttons">
+            <a href="/start_recognition" class="btn primary">Start Face Scan</a>
+            <a href="/home_ready" class="btn secondary" onclick="fetch('/home_ready')">Back Home</a>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Email | Smart Safe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<section class="simple-page">
+    <div class="simple-card">
+
+        <h1>Update Email</h1>
+
+        <p>Enter the new owner's email address.</p>
+
+        <form method="POST">
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter Email"
+                required
+                class="email-input"
+            >
+
+            <br><br>
+
+            <button type="submit" class="btn">
+                Continue
+            </button>
+
+        </form>
+
+    </div>
+</section>
+
+</body>
+</html>

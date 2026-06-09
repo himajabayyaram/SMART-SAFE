@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Details | Smart Safe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">SMART SAFE</div>
+
+    <div class="nav-links">
+        <a href="/home_ready">Home</a>
+        <a href="/recognize">Recognition</a>
+        <a href="/register">Register</a>
+        <a href="/update_owner">Update Owner</a>
+    </div>
+</nav>
+
+<section class="details-page">
+
+    <h1 class="main-title" data-text="Smart Safe Project Details">
+    Smart Safe Project Details
+</h1>
+
+    <p class="intro">
+        Smart Safe is an IoT-based face recognition security system designed to
+        protect valuables by allowing access only to the registered owner.
+    </p>
+
+    <div class="detail-card">
+        <h2>1. Project Overview</h2>
+        <p>
+            This project combines IoT, face recognition, Python, Flask, camera module, LCD display, buzzer, and lock control.
+            The main purpose is to create a smart safe that opens only when the authorized owner’s face is detected.
+            It also ensures that no static images or pre-made videos are used by enabling liveliness using random expression verification, making it unpredicatble. 
+        </p>
+    </div>
+
+    <div class="detail-card">
+        <h2>2. What is IoT?</h2>
+
+        <div class="info-layout">
+            <div>
+                <p>
+                    IoT means Internet of Things.
+                    It is a technology where physical devices
+                    such as cameras, sensors, buzzers, motors, displays, and controllers
+                    communicate with software to perform automatic actions.
+                </p> 
+                <p>
+                In this project, IoT is used to connect the software face recognition
+                system with hardware components like buzzer, LCD, and safe lock.
+                </p>
+            </div>
+
+            <img src="{{ url_for('static', filename='images/iot.webp') }}" class="detail-img">
+        </div>
+    </div>
+
+    <div class="detail-card">
+        <h2>3. What is Face Recognition?</h2>
+
+        <div class="info-layout">
+            <div>
+                <p>
+                    Face recognition is a biometric technology that identifies a person using
+                    facial features. The camera captures the face, the software analyzes it,
+                    and then compares it with the registered owner’s face data.
+                </p>
+            </div>
+
+            <img src="{{ url_for('static', filename='images/face_recognition.webp') }}" class="detail-img">
+        </div>
+    </div>
+
+    <div class="detail-card">
+        <h2>4. Main Aim</h2>
+        <p>
+            The aim of this project is to build a keyless smart safe system that uses
+            face recognition instead of keys or passwords.
+             It increases security and
+            reduces unauthorized access.
+        </p>
+    </div>
+
+    <div class="detail-card">
+        <h2>5. Components Used</h2>
+
+        <div class="info-layout">
+            <ul>
+                <li>ESP32-CAM or webcam</li>
+                <li>Arduino / ESP32 board</li>
+                <li>Buzzer</li>
+                <li>LCD display</li>
+                <li>Servo motor or electronic lock</li>
+                <li>Jumper wires</li>
+                <li>Breadboard</li>
+                <li>Python</li>
+                <li>Flask web framework</li>
+                <li>HTML and CSS frontend</li>
+                <li>Face recognition library / OpenCV</li>
+            </ul>
+
+            <img src="{{ url_for('static', filename='images/hardware.jpeg') }}" class="detail-img">
+        </div>
+    </div>
+
+    <div class="detail-card">
+        <h2>6. Software Used</h2>
+        <ul>
+            <li>Python for backend programming</li>
+            <li>Flask for web application</li>
+            <li>OpenCV for camera and image processing</li>
+            <li>HTML for webpage structure</li>
+            <li>CSS for premium design</li>
+            <li>Arduino IDE for microcontroller programming</li>
+        </ul>
+    </div>
+
+    <div class="detail-card">
+        <h2>7. How the System Works</h2>
+
+        <div class="info-layout">
+            <div>
+                <ol>
+                    <li>The owner registers their face.</li>
+                    <li>The face data is stored in the system.</li>
+                    <li>The user clicks recognition.</li>
+                    <li>The camera scans the face.</li>
+                    <li>The software compares the scanned face with stored owner data.</li>
+                    <li>If matched, it goes ahead with the Expression Verification.</li>
+                    <li>If not matched, access is denied.</li>
+                    <li>Random expression is generated.</li>
+                    <li>If the expression is performed accurately, access is granted.</li>
+                    <li>If not matched, access is denied.</li>
+                </ol>
+            </div>
+
+            <img src="{{ url_for('static', filename='images/system_flow.jpeg') }}" class="detail-img">
+        </div>
+
+        <div class="NOTE">
+            <h3>WHAT HAPPENS DURING ACCESS DENIED?</h3>
+            <p>
+                The Buzzer beeps.
+                The photo of the intruder is sent to the owner's email.
+            </p>
+        </div>
+
+        <div class="NOTE">
+            <h3>WHAT HAPPENS DURING OWNER UPDATE?</h3>
+            <p>
+                When the owner wants to update their face images, three simple but unique security questions are displayed.
+                These questions are already set during the initial setup. The owner must answer all three questions correctly.
+                Only after successful verification, the system allows the owner to update their face images.
+                This prevents any random person from changing the registered owner's image and keeps the smart safe secure.
+            </p>
+        </div>
+    </div>
+    
+
+    <div class="detail-card">
+        <h2>8. Face Registration</h2>
+        <p>
+            Face registration is the process of capturing the owner’s face and saving
+            it as the authorized identity.
+            This registered face is later used for
+            comparison during recognition.
+        </p>
+    </div>
+
+    <div class="detail-card">
+        <h2>9. Face Recognition Process</h2>
+        <p>
+            During recognition, the camera captures a new face image.
+             The system checks
+            whether the face matches the registered owner.
+             If the match is successful,
+            it moves to expression verification.
+            If not, the safe remains locked.
+        </p>
+    </div>
+
+    <div class="detail-card">
+        <h2>10. Access Granted Condition</h2>
+
+        <div class="info-layout">
+            <div>
+                <p>
+                    Access granted means the scanned face belongs to the registered owner.
+                    Then a random expression is generated which needs to be performed accurately to be unlocked.
+                    LCD displays "Access Granted".
+                </p>
+            </div>
+
+            <img src="{{ url_for('static', filename='images/access_granted.jpeg') }}" class="detail-img">
+        </div>
+    </div>
+
+    <div class="detail-card">
+        <h2>11. Access Denied Condition</h2>
+
+        <div class="info-layout">
+            <div>
+                <p>
+                    Access denied means the scanned face does not match the owner.
+                    The system can show “Access Denied”, activate the buzzer,
+                    and send the intruder's photo to the owner's email while keeping the safe locked.
+                </p>
+            </div>
+
+            <img src="{{ url_for('static', filename='images/access_denied.jpeg') }}" class="detail-img">
+        </div>
+    </div>
+
+    <div class="detail-card">
+        <h2>12. Role of LCD Display</h2>
+        <p>
+            The LCD display shows live status messages such as scanning, access granted,
+            access denied, next challenge, or safe opened.
+             It helps the user understand
+            what the system is doing.
+        </p>
+    </div>
+
+    <div class="detail-card">
+        <h2>13. Role of Buzzer</h2>
+        <p>
+            The buzzer works as an alert system.
+
+             If an unauthorized person tries to
+            access the safe, the buzzer turns on to warn the owner or nearby people.
+        </p>
+    </div>
+
+   
+
+    <div class="detail-card">
+        <h2>15. Role of Flask Web App</h2>
+        <p>
+            Flask is used to create the web interface.
+            Through the webpage, the user
+            can register a face, start recognition, update the owner, and view project
+            information.
+        </p>
+    </div>
+
+    <div class="detail-card">
+        <h2>16. Advantages</h2>
+        <ul>
+            <li>No need for physical keys</li>
+            <li>Better security using biometrics</li>
+            <li>Easy to use</li>
+            <li>Ensures Liveness</li>
+            <li>Automatic access control</li>
+            <li>Alert system for unauthorized access</li>
+            <li>Useful for real-time IoT applications</li>
+        </ul>
+    </div>
+
+    <div class="detail-card">
+        <h2>17. Applications</h2>
+
+        <div class="info-layout">
+            <div>
+                <ul>
+                    <li>Home lockers</li>
+                    <li>Jewellery safes</li>
+                    <li>Office document safes</li>
+                    <li>School and college projects</li>
+                    <li>Bank locker prototype systems</li>
+                    <li>Personal security boxes</li>
+                </ul>
+            </div>
+
+            <img src="{{ url_for('static', filename='images/applications.jpeg') }}" class="detail-img">
+        </div>
+    </div>
+
+    <div class="detail-card">
+        <h2>18. Future Scope</h2>
+        <ul>
+            <li>Send intruder image to owner</li>
+            <li>Add OTP verification</li>
+            <li>Add mobile app control</li>
+            <li>Add cloud database</li>
+            <li>Add fingerprint sensor</li>
+            <li>Add voice alert system</li>
+        </ul>
+    </div>
+
+    <div class="detail-card">
+        <h2>19. Conclusion</h2>
+        <p>
+            Smart Safe is a modern IoT security project that uses face recognition
+            to protect valuables.
+            It combines software and hardware to create a smart,
+            secure, and user-friendly safe system.
+        </p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Smart Safe | Project Details</p>
+</footer>
+
+</body>
+</html>

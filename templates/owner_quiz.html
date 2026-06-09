@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Owner Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<section class="camera-page">
+    <div class="camera-card">
+        <h1>Owner Verification Quiz</h1>
+        <p>Answer the questions to update owner.</p>
+
+        {% if error %}
+            <p style="color:red;">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST" action="/update_owner">
+            <input type="text" name="q1" placeholder="Project name" required><br><br>
+            <input type="text" name="q2" placeholder="Safe color" required><br><br>
+            <input type="text" name="q3" placeholder="Owner keyword" required><br><br>
+
+            <button type="submit" class="btn">Verify Owner</button>
+        </form>
+
+        <br>
+        <a href="/home_ready" class="btn secondary">Back Home</a>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Owner | Smart Safe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">SMART SAFE</div>
+    <div class="nav-links">
+        <a href="/home_ready">Home</a>
+        <a href="/project_details">Project Details</a>
+    </div>
+</nav>
+
+<section class="camera-page">
+    <div class="camera-card">
+        {% if message %}
+    <h1>Owner Already Registered</h1>
+    <p>{{ message }}</p>
+
+    <a href="/update_owner" class="btn secondary">Update Owner</a>
+    <br><br>
+    <a href="/home_ready" class="btn secondary">Back Home</a>
+{% else %}
+    <h1>Register Owner</h1>
+    <p>LOOK AT THE CAMERA and slowly move your head to capture all angles clearly.</p>
+
+    <img src="/register_video_feed" class="camera-feed">
+
+    <br><br>
+
+    <form action="/email_setup" method="POST">
+        <input type="email" name="email"
+           placeholder="Enter Your Email"
+           required>
+
+        <button type="submit" >Save Email</button>
+    </form>
+
+    <br><br>
+    
+    <a href="/home_ready" class="btn secondary">Back Home</a>
+{% endif %}
+
+        
+    </div>
+</section>
+
+</body>
+</html>
