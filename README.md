@@ -314,21 +314,31 @@ SMARTSAFE
 ├── trainer.yml
 ├── owner_email.txt
 ├── owner_registered.txt
+├── owner_1.jpg
+├── owner_2.jpg
+├── ...
+├── owner_35.jpg
 │
 ├── images/
-│   ├── owner_1.jpg
-│   ├── owner_2.jpg
-│   ├── ...
-│   └── owner_35.jpg
-│
+│   ├── stores images used in the Frontend
+│   
 ├── templates/
 │   ├── index.html
+│   ├── change_email_choice.html
+│   ├── challenge.html
+│   └── email.html
 │   ├── register.html
 │   ├── recognize.html
 │   ├── update_owner.html
 │   ├── project_details.html
-│   └── style.css
+│   ├── owner_quiz.html
+│   ├── update_email.html
 │
+├── static/
+│   ├── images/
+│       ├── stores images used in the Frontend
+│   ├── style.css
+│   
 └── README.md
 ```
 
@@ -336,39 +346,17 @@ SMARTSAFE
 
 # 📸 Project Screenshots
 
-## Registration Page
+## Backend Implementation
 
 (Add Screenshot Here)
 
-## Face Recognition
+## Front Implementation
 
 (Add Screenshot Here)
 
-## Expression Verification
+## Hardware Implementation
 
 (Add Screenshot Here)
-
-## Access Granted
-
-(Add Screenshot Here)
-
-## Access Denied
-
-(Add Screenshot Here)
-
-## Owner Update Module
-
-(Add Screenshot Here)
-
----
-
-# 🎓 Team Members
-
-| Name |
-|--------|
-| Bayyaram Himaja |
-| Bhola Aditya Kanth |
-| Sriya Supriya Patnaik |
 
 ---
 
