@@ -411,14 +411,15 @@ SMARTSAFE
 ## Basic Webpage
 
 <p align="center">
-  <img src="static/images/webpage1.png" width="35%" style="margin-right:20px;">
+  <img src="static/images/webpage1.png" width="35%">
   <img src="static/images/webpage2.png" width="35%">
 </p>
 
 ## Email Alert
 
-  <img src="static/images/screenshot(41).png" width="55%">
-
+<p align="center">
+  <img src="static/images/Screenshot(41).png" width="35%">
+</p>
 
 ## Hardware Implementation
 
@@ -430,7 +431,9 @@ SMARTSAFE
 
 ## System Architecture
 
-  <img src="static/images/archi.jpeg" width="55%">
+<p align="center">
+  <img src="static/images/archi.jpeg" width="35%">
+</p>
 ---
 
 # 🚀 Future Enhancements
