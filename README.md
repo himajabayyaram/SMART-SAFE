@@ -411,7 +411,7 @@ SMARTSAFE
 ## Basic Webpage
 
 <p align="center">
-  <img src="static/images/webpage1.png" width="35%">
+  <img src="static/images/webpage1.png" width="35%" style="margin-right:20px;">
   <img src="static/images/webpage2.png" width="35%">
 </p>
 
