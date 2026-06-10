@@ -418,7 +418,7 @@ SMARTSAFE
 ## Email Alert
 
 <p align="center">
-  <img src="static/images/Screenshot(41).png" width="55%">
+  <img src="static/images/Screenshot (41).png" width="55%">
 </p>
 
 ## Hardware Implementation
