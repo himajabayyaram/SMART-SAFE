@@ -477,11 +477,6 @@ Through this project, we gained practical experience in:
 4. Upload Arduino code
 5. Run Flask application
 
-```bash
-python app.py
-
-'''
-
 ---
 
 # ✅ Conclusion
