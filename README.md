@@ -418,7 +418,7 @@ SMARTSAFE
 ## Email Alert
 
 <p align="center">
-  <img src="static/images/Screenshot(41).png" width="35%">
+  <img src="static/images/Screenshot(41).png" width="55%">
 </p>
 
 ## Hardware Implementation
@@ -432,7 +432,7 @@ SMARTSAFE
 ## System Architecture
 
 <p align="center">
-  <img src="static/images/archi.jpeg" width="35%">
+  <img src="static/images/archi.jpeg" width="55%">
 </p>
 ---
 
