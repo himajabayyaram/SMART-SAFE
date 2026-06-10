@@ -408,23 +408,29 @@ SMARTSAFE
 
 # 📸 Project Screenshots
 
-## Basic webpage
+## Basic Webpage
 
 <p align="center">
   <img src="static/images/webpage1.png" width="45%">
   <img src="static/images/webpage2.png" width="45%">
 </p>
 
-## Front Implementation
+## Email Alert
 
-(Add Screenshot Here)
+  <img src="static/images/screenshot(41).png" width="70%">
+
 
 ## Hardware Implementation
 
-(Add Screenshot Here)
+<p align="center">
+  <img src="static/images/hardware1.jpeg" width="45%">
+  <img src="static/images/hardware2.jpeg" width="45%">
+</p>
+
 
 ## System Architecture
 
+  <img src="static/images/archi.jpeg" width="70%">
 ---
 
 # 🚀 Future Enhancements
