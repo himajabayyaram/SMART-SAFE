@@ -451,7 +451,7 @@ SMARTSAFE
 
 ---
 
-## 🎓 Learning Outcomes
+# 🎓 Learning Outcomes
 
 Through this project, we gained practical experience in:
 
@@ -470,7 +470,7 @@ Through this project, we gained practical experience in:
 
 ---
 
-## 🚀 Deployment
+# 🚀 Deployment
 
 ### Software Setup
 
@@ -503,3 +503,9 @@ The system demonstrates how Artificial Intelligence, Computer Vision, and IoT ca
 - HTML Documentation – https://developer.mozilla.org/en-US/docs/Web/HTML
 - CSS Documentation – https://developer.mozilla.org/en-US/docs/Web/CSS
 - IEEE Xplore – https://ieeexplore.ieee.org
+
+---
+
+# 👩‍💻 Author
+
+Himaja Bayyaram – B.Tech Student | Developer of SmartSafe
