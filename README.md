@@ -373,6 +373,7 @@ SMARTSAFE
 ├── challenge_face.py
 ├── arduino_control.py
 ├── trainer.yml
+├── arduino.ino
 ├── owner_email.txt
 ├── owner_registered.txt
 ├── owner_1.jpg
@@ -397,7 +398,7 @@ SMARTSAFE
 │
 ├── static/
 │   ├── images/
-│       ├── stores images used in the Frontend
+│   ├  ├── stores images used in the Frontend
 │   ├── style.css
 │   
 └── README.md
@@ -407,11 +408,11 @@ SMARTSAFE
 
 # 📸 Project Screenshots
 
-## Backend Implementation
+## Basic webpage
 
 <p align="center">
-  <img src=""C:\Users\Maanasa\OneDrive\Pictures\Screenshots\Screenshot(42).png" width="45%">
-  <img src=""C:\Users\Maanasa\OneDrive\Pictures\Screenshots\Screenshot(48).png" width="45%">
+  <img src="static/images/webpage1.png" width="45%">
+  <img src="static/images/webpage2.png" width="45%">
 </p>
 
 ## Front Implementation
