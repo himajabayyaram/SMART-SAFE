@@ -382,24 +382,24 @@ SMARTSAFE
 ├── owner_35.jpg
 │
 ├── images/
-│   ├── stores images used in the Frontend
+│   └── stores images used in the Frontend
 │   
 ├── templates/
 │   ├── index.html
 │   ├── change_email_choice.html
 │   ├── challenge.html
-│   └── email.html
+│   ├── email.html
 │   ├── register.html
 │   ├── recognize.html
 │   ├── update_owner.html
 │   ├── project_details.html
 │   ├── owner_quiz.html
-│   ├── update_email.html
+│   └──  update_email.html
 │
 ├── static/
 │   ├── images/
 │   ├  ├── stores images used in the Frontend
-│   ├── style.css
+│   └── style.css
 │   
 └── README.md
 ```
@@ -411,26 +411,26 @@ SMARTSAFE
 ## Basic Webpage
 
 <p align="center">
-  <img src="static/images/webpage1.png" width="45%">
-  <img src="static/images/webpage2.png" width="45%">
+  <img src="static/images/webpage1.png" width="35%">
+  <img src="static/images/webpage2.png" width="35%">
 </p>
 
 ## Email Alert
 
-  <img src="static/images/screenshot(41).png" width="70%">
+  <img src="static/images/screenshot(41).png" width="55%">
 
 
 ## Hardware Implementation
 
 <p align="center">
-  <img src="static/images/hardware1.jpeg" width="45%">
-  <img src="static/images/hardware2.jpeg" width="45%">
+  <img src="static/images/hardware1.jpeg" width="35%">
+  <img src="static/images/hardware2.jpeg" width="35%">
 </p>
 
 
 ## System Architecture
 
-  <img src="static/images/archi.jpeg" width="70%">
+  <img src="static/images/archi.jpeg" width="55%">
 ---
 
 # 🚀 Future Enhancements
